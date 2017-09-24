@@ -2,6 +2,8 @@
 
 Loads the front page of Reddit and displays the posts in a list
 
+![Demo](../master/example.gif)
+
 ## Uses:
 
 * create-react-native-app
@@ -25,7 +27,6 @@ Loads the front page of Reddit and displays the posts in a list
 * `yarn lint` to validate the code is proper
 * `yarn test` to start jest in watch mode
 * `yarn start` to use the console menu for launching Android or iOS
-
 
 ### Linting
 Linting is done via `yarn lint` and uses an
