@@ -37,14 +37,12 @@ to load an [example](../master/__tests__/reddit.json) of Reddit's JSON
 and test both the [success path](../master/__tests__/App.test.js#L20)
 and the [failure path](../master/__tests__/App.test.js#L41) of
 [loading](../master/actions/index.js#L24)
-and [parsing](../master/actions/index.js#L1) of refreshing 
-from the Reddit API.
+and [parsing](../master/actions/index.js#L1) of the Reddit API.
 
 ### Acton creators and reducers
 There are 4 total actions.  The 3 related to refreshing are:
 `REDDIT_REFRESHING`, `REDDIT_LOADED`, and `REDDIT_ERROR`.  These actions have
-[action creators](../master/actions/index.js#L24) and
-[reducers](../master/reducers/index.js#L5).
+[reducers](../master/reducers/index.js#L5) for handling state changes.
 
 There is also a `VIEW_POST`
 [action creator](../master/actions/index.js#L45) and corresponding
@@ -74,8 +72,8 @@ When a liste item is touched, the a screen with
 a `WebView` displays the URL.
 
 ### Entry point
-The [entry point](../mater/App.js#L25) is wrapped with a `View` to
+The [entry point](../master/App.js#L25) is wrapped with a `View` to
 properly handle variable status bar heights on each platform.
 
-This app also includes presistence via
+This entry point also includes presistence via
 [redux-persist](https://github.com/rt2zz/redux-persist)'s auto-rehydrate.
