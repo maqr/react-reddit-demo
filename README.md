@@ -29,7 +29,7 @@ Loads the front page of Reddit and displays the posts in a list
 
 ### Linting
 Linting is done via `yarn lint` and uses an
-[aggressive .eslintrc](../master/.eslintrc")
+[aggressive .eslintrc](../master/.eslintrc)
 
 ### Testing
 This project uses [jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock)
