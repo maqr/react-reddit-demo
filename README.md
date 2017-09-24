@@ -2,7 +2,7 @@
 
 Loads the front page of Reddit and displays the posts in a list
 
-![Demo](../master/example.gif)
+![Demo](example.gif)
 
 ## Uses:
 
@@ -30,50 +30,50 @@ Loads the front page of Reddit and displays the posts in a list
 
 ### Linting
 Linting is done via `yarn lint` and uses an
-[aggressive .eslintrc](../master/.eslintrc)
+[aggressive .eslintrc](.eslintrc)
 
 ### Testing
 This project uses [jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock)
-to load an [example](../master/__tests__/reddit.json) of Reddit's JSON
-and test both the [success path](../master/__tests__/App.test.js#L20)
-and the [failure path](../master/__tests__/App.test.js#L41) of
-[loading](../master/actions/index.js#L24)
-and [parsing](../master/actions/index.js#L1) of the Reddit API.
+to load an [example](__tests__/reddit.json) of Reddit's JSON
+and test both the [success path](__tests__/App.test.js#L20)
+and the [failure path](__tests__/App.test.js#L41) of
+[loading](actions/index.js#L24)
+and [parsing](actions/index.js#L1) of the Reddit API.
 
 ### Acton creators and reducers
 There are 4 total actions.  The 3 related to refreshing are:
 `REDDIT_REFRESHING`, `REDDIT_LOADED`, and `REDDIT_ERROR`.  These actions have
-[reducers](../master/reducers/index.js#L5) for handling state changes.
+[reducers](reducers/index.js#L5) for handling state changes.
 
 There is also a `VIEW_POST`
-[action creator](../master/actions/index.js#L45) and corresponding
-[reducer](../master/reducers/index.js#L25) for handling navigation events.
+[action creator](actions/index.js#L45) and corresponding
+[reducer](reducers/index.js#L25) for handling navigation events.
 
 ### Navigation
 For basic "stack" style navigation,
 [react-navigation](https://github.com/react-community/react-navigation) is
-used. A [Main Screen](../master/navigators/index.js#L14) and the secondary
-[View Post Screen](../master/navigators/index.js#L22) reference components
+used. A [Main Screen](navigators/index.js#L14) and the secondary
+[View Post Screen](navigators/index.js#L22) reference components
 and accept parameters from the navigator.
-The [Navigator](../master/navigators/index.js#L35) is wrapped in a class
+The [Navigator](navigators/index.js#L35) is wrapped in a class
 and some additional global functionality, such as Android back button support,
 is added here.
 
 ### Components
-The [RedditList](../master/components/RedditList.js) uses
+The [RedditList](components/RedditList.js) uses
 `TouchableHighlight` and `FlatList` to create a touchable list of
 `RedditListItem`, which is refreshed on first load.
 
 The `RedditList` is comprised of an array of
-[RedditListItem](../master/components/RedditListItem.js) which handles
+[RedditListItem](components/RedditListItem.js) which handles
 the display of every post in the list.
 
 When a liste item is touched, the a screen with
-[RedditViewPost](../master/components/RedditViewPost.js) is pushed and
+[RedditViewPost](components/RedditViewPost.js) is pushed and
 a `WebView` displays the URL.
 
 ### Entry point
-The [entry point](../master/App.js#L25) is wrapped with a `View` to
+The [entry point](App.js#L25) is wrapped with a `View` to
 properly handle variable status bar heights on each platform.
 
 This entry point also includes presistence via
