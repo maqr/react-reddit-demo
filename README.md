@@ -36,7 +36,8 @@ This project uses [jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock)
 to load an [example](../master/__tests__/reddit.json) of Reddit's JSON
 and test both the [success path](../master/__tests__/App.test.js#L20)
 and the [failure path](../master/__tests__/App.test.js#L41) of
-[loading and parsing](../master/actions/index.js#L1) of refreshing 
+[loading](../master/actions/index.js#L24)
+and [parsing](../master/actions/index.js#L1) of refreshing 
 from the Reddit API.
 
 ### Acton creators and reducers
