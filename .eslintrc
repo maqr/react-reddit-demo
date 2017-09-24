@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    "jest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:react/recommended",
+    "plugin:react-native/all",
+    "universe/native"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": "off"
+  }
+}
